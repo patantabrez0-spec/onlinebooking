@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore rooms | RoomEase</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script defer src="/js/app.js"></script>
+  <script defer src="/js/rooms.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><span class="brand-mark">R</span>RoomEase</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="/rooms.html">Explore stays</a><a href="/my-bookings.html">My bookings</a><a href="/admin.html" data-admin-link hidden>Manage</a>
+      <a href="/login.html" data-guest-link>Sign in</a><a class="button button-small" href="/register.html" data-guest-link>Get started</a>
+      <span class="nav-user" data-user-name hidden></span><button class="button button-small button-outline" data-logout hidden>Sign out</button>
+    </nav>
+  </header>
+  <main class="page-main">
+    <section class="page-intro"><p class="eyebrow">Find your place</p><h1>Rooms to settle into</h1><p>Browse comfortable stays and find the right fit for your next trip.</p></section>
+    <form id="room-search" class="search-panel">
+      <label>Destination<input name="location" type="search" placeholder="City or neighborhood"></label>
+      <label>Guests<input name="guests" type="number" min="1" max="30" placeholder="Any"></label>
+      <label>Max price / night<input name="maxPrice" type="number" min="0" step="1" placeholder="No limit"></label>
+      <button class="button" type="submit">Search rooms</button>
+    </form>
+    <div class="section-heading results-heading"><h2>Available stays</h2><span id="room-count" class="muted"></span></div>
+    <div id="room-list" class="room-grid"><p class="muted">Loading rooms...</p></div>
+    <p id="room-message" class="message" aria-live="polite"></p>
+  </main>
+  <footer class="site-footer"><a class="brand" href="/"><span class="brand-mark">R</span>RoomEase</a><p>Make yourself at home, wherever you go.</p></footer>
+</body>
+</html>

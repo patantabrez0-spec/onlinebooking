@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage stays | RoomEase</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script defer src="/js/app.js"></script>
+  <script defer src="/js/booking.js"></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="/"><span class="brand-mark">R</span>RoomEase</a><nav class="main-nav" aria-label="Main navigation"><a href="/rooms.html">Explore stays</a><a href="/my-bookings.html">My bookings</a><a class="active" href="/admin.html">Manage</a><span class="nav-user" data-user-name hidden></span><button class="button button-small button-outline" data-logout hidden>Sign out</button></nav></header>
+  <main class="page-main">
+    <section class="page-intro"><p class="eyebrow">RoomEase dashboard</p><h1>Manage your stays</h1><p>Add and update room listings and review guest bookings.</p></section>
+    <div class="admin-layout">
+      <section class="content-card">
+        <div class="section-heading"><div><p class="eyebrow">Room listings</p><h2 id="room-form-title">Add a room</h2></div></div>
+        <form id="room-form" class="form-stack">
+          <input type="hidden" name="roomId">
+          <label>Room name<input name="name" required maxlength="100"></label>
+          <label>Description<textarea name="description" rows="4" required maxlength="2000"></textarea></label>
+          <div class="form-row">
+            <label>Location<input name="location" required maxlength="120"></label>
+            <label>Price per night (₹)<input name="pricePerNight" type="number" min="0" step="0.01" required></label>
+          </div>
+          <div class="form-row">
+            <label>Guest capacity<input name="capacity" type="number" min="1" max="30" required></label>
+            <label>Image URL<input name="imageUrl" type="url" placeholder="https://..."></label>
+          </div>
+          <label>Amenities <small>Separate each amenity with a comma.</small><input name="amenities" placeholder="Wi-Fi, Breakfast, Balcony"></label>
+          <div class="form-actions"><button class="button" type="submit">Save room</button><button id="cancel-edit" class="button button-outline" type="button" hidden>Cancel edit</button></div>
+        </form>
+        <p id="admin-message" class="message" aria-live="polite"></p>
+      </section>
+      <section class="admin-section">
+        <div class="section-heading"><div><p class="eyebrow">Your inventory</p><h2>Room listings</h2></div></div>
+        <div id="admin-rooms" class="admin-list"><p class="muted">Loading rooms...</p></div>
+      </section>
+    </div>
+    <section class="admin-section admin-bookings-section">
+      <div class="section-heading"><div><p class="eyebrow">Guest activity</p><h2>Recent bookings</h2></div></div>
+      <div id="admin-bookings" class="booking-list"><p class="muted">Loading bookings...</p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="/"><span class="brand-mark">R</span>RoomEase</a><p>Make yourself at home, wherever you go.</p></footer>
+</body>
+</html>

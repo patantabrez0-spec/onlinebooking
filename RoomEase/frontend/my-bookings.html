@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My bookings | RoomEase</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script defer src="/js/app.js"></script>
+  <script defer src="/js/booking.js"></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="/"><span class="brand-mark">R</span>RoomEase</a><nav class="main-nav" aria-label="Main navigation"><a href="/rooms.html">Explore stays</a><a class="active" href="/my-bookings.html">My bookings</a><a href="/admin.html" data-admin-link hidden>Manage</a><a href="/login.html" data-guest-link>Sign in</a><a class="button button-small" href="/register.html" data-guest-link>Get started</a><span class="nav-user" data-user-name hidden></span><button class="button button-small button-outline" data-logout hidden>Sign out</button></nav></header>
+  <main class="page-main">
+    <section class="page-intro"><p class="eyebrow">Your RoomEase trips</p><h1>My bookings</h1><p>All your stays, together in one place.</p></section>
+    <div id="bookings-list" class="booking-list"><p class="muted">Loading your bookings...</p></div>
+    <p id="booking-message" class="message" aria-live="polite"></p>
+  </main>
+  <footer class="site-footer"><a class="brand" href="/"><span class="brand-mark">R</span>RoomEase</a><p>Make yourself at home, wherever you go.</p></footer>
+</body>
+</html>
